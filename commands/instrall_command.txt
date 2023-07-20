@@ -136,3 +136,119 @@ use SoftDeletes; // use the trait
 protected $dates = ['deleted_at']; // mark this column as a date
 3. 	to view records with deleted data use withTrashed() like the following: 
 $products = Product::withTrashed()->paginate(20);
+
+
+
+
+
+
+
+git........
+
+
+
+
+Microsoft Windows [Version 10.0.19045.3208]
+(c) Microsoft Corporation. All rights reserved.
+
+F:\xxammp\htdocs\Laravel\error>npm install
+
+added 112 packages, and audited 113 packages in 55s
+
+21 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice
+npm notice New minor version of npm available! 9.7.2 -> 9.8.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v9.8.1
+npm notice Run npm install -g npm@9.8.1 to update!
+npm notice
+
+F:\xxammp\htdocs\Laravel\error>composer require laravel/breeze --dev
+Info from https://repo.packagist.org: #StandWithUkraine
+./composer.json has been updated
+Running composer update laravel/breeze
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+   INFO  Discovering packages.
+
+  laravel/breeze ................................................................................................ DONE
+  laravel/sail .................................................................................................. DONE
+  laravel/sanctum ............................................................................................... DONE
+  laravel/tinker ................................................................................................ DONE
+  nesbot/carbon ................................................................................................. DONE
+  nunomaduro/collision .......................................................................................... DONE
+  nunomaduro/termwind ........................................................................................... DONE
+  spatie/laravel-ignition ....................................................................................... DONE
+
+82 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+   INFO  No publishable resources for tag [laravel-assets].
+
+No security vulnerability advisories found
+Using version ^1.21 for laravel/breeze
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/',[userController::class,'index']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/home',[userController::class,'home']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/about',[userController::class,'about']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/product',[userController::class,'product']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/',[userController::class,'index']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/home',[userController::class,'home']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/about',[userController::class,'about']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>Route::get('/product',[userController::class,'product']);
+The filename, directory name, or volume label syntax is incorrect.
+
+F:\xxammp\htdocs\Laravel\error>php artisan breeze:install blade
+
+   INFO  Installing and building Node dependencies.
+
+
+up to date, audited 113 packages in 2s
+
+21 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> build
+> vite build
+
+    vite v4.4.4 building for production...
+    transforming...
+    ✓ 47 modules transformed.
+rendering chunks...
+computing gzip size...
+    public/build/manifest.json             0.26 kB │ gzip:  0.13 kB
+public/build/assets/app-5e4d0285.css  31.34 kB │ gzip:  6.07 kB
+public/build/assets/app-4a08c204.js   70.82 kB │ gzip: 26.36 kB
+✓ built in 6.43s
+
+   INFO  Breeze scaffolding installed successfully.
+
+
+F:\xxammp\htdocs\Laravel\error>
