@@ -27,7 +27,7 @@
                     <td>{{$cat->name}}</td>
                     <td>{{$cat->description}}</td>
                     <td style="text-align:center">
-                        <a href="{{url("category/".$cat->id)}}"><i class="bi bi-eye-fill"></i></i></a>
+                        <a href="{{url("catagory/".$cat->id)}}"><i class="bi bi-eye-fill"></i></i></a>
                         <a href="#"><i class="bi bi-pencil-square"></i></a>
                         <a href="#"><i class="bi bi-trash3-fill"></i></a>
                     </td>

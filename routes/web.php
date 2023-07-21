@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::get('/', [userController::class, 'index']);
 Route::get('/home', [userController::class, 'home']);
+Route::resource('catagory', CatagoryController::class);
 
 
 

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\catagory;
 use Illuminate\Http\Request;
 
+use function Ramsey\Uuid\v1;
+
 class CatagoryController extends Controller
 {
     /**
@@ -12,7 +14,8 @@ class CatagoryController extends Controller
      */
     public function index()
     {
-        //
+        $cats =catagory::paginate(config("idb.perpage"));
+        return view("catagory.index")->with('cats', $cats);
     }
 
     /**
@@ -20,7 +23,7 @@ class CatagoryController extends Controller
      */
     public function create()
     {
-        //
+       return view("catagory.create");
     }
 
     /**
@@ -36,10 +39,10 @@ class CatagoryController extends Controller
      */
     public function show(catagory $catagory)
     {
-       
+       return view("catagory.single")->with('cat',$catagory);
     }
 
-    
+
     /**
      * Show the form for editing the specified resource.
      */
