@@ -14,6 +14,7 @@ class CatagoryController extends Controller
      */
     public function index()
     {
+        
         $cats =catagory::paginate(config("idb.perpage"));
         return view("catagory.index")->with('cats', $cats);
     }
@@ -31,7 +32,8 @@ class CatagoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        catagory::create($request->all());
+        return redirect("catagory")->with("success", "Successfully created");
     }
 
     /**

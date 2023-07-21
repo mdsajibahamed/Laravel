@@ -1,4 +1,4 @@
 <?php
 return [
-    'perpage' => 10,
+    'perpage' => 20,
 ];

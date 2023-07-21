@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class userController extends Controller
 {
     public function index(){
-        // $users = User::all();  
+        $users = User::all();  
         // return view("home")->with("users", $users); 
         $cats = catagory::all();
-        return view("home")->with("cats",$cats);
+        return view("home")->with("cats",$cats)->with("users",$users);
     }
     public function home(){
         return view("home");

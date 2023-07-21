@@ -34,13 +34,22 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url("dashboard")}}">Dashboard</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url("catagory")}}">Category</a>
+              </li>
                  
               <li>
-            <form action="POST" action="{{route("logout")}}">
-                @csrf
-                <a href="#" onclick="event.preventDefault();
-                this.closets('form').submit();">Logout</a>
-            </form>
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <a class="nav-link" href="#" onclick="event.preventDefault();
+                  this.closest('form').submit();">Logout</a>
+              </form>  
+              
+
+              <form action="{{route('logout')}}" method="POST">
+              @csrf 
+              <a href="#" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+              </form>
               </li>
              @endauth
              @guest

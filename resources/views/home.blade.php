@@ -6,13 +6,39 @@
 
         @section('content')
 
-
-      <h1>  All  Category
-      </h1>
-      <ul class="list-inline">
-        @foreach ($cats as $cat)
-            <li class="list-inline-item">{{$cats->name}} </li>
+        <h1>User list</h1>
+        @foreach ($users as $user)
+        <li>{{$user->name}} - {{$user->email}} - {{$user->role=="2"?"Admin":"User"}} </li>
+            
         @endforeach
+
+
+        <h1>  All  Category
+        </h1>
+  
+  
+        <table class="table table-striped table-primary">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+       
+        <ul class="list-inline">
+          @foreach ($cats as $cat)
+          <tr >
+            <td><li class="list-inline-item">{{$cat->id}} </li></td>
+            <td>  <li class="list-inline-item">{{$cat->name}} </li></td>
+            <td>  <li class="list-inline-item">{{$cat->description}} </li>
+  
+          </tr>
+          {{-- {{$cats->links()}} --}}
+          @endforeach
+  
+        </table>
+
+
+
       </ul>
 
         <div class="card" style="width: 18rem;">

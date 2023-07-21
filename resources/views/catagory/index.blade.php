@@ -1,8 +1,13 @@
 @extends('layouts.test')
 @section('content')
 
-    <h1>All Catagory</h1>
-
+    
+    <div class="d-flex justify-content-between">
+        <h1>All Catagory</h1>
+        <a style="font-size:3em" href="{{url('catagory/create')}}"><i class="bi bi-file-plus-fill"></i></a>
+    
+    </div>
+ 
 
     <table class="table table-striped  table-primary">
         <colgroup>
@@ -33,8 +38,10 @@
                     </td>
                 </tr>
             @empty
-                
+
+                <h1>No Value Available</h1>
             @endforelse
        
     </table>
+    {{$cats->links()}}
 @endsection
