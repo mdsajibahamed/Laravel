@@ -20,10 +20,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/',    [userController::class,'index']);
-Route::get('/home',[userController::class,'home']);
-Route::get('/about',[userController::class,'about']);
-Route::get('/product',[userController::class,'product']);
+Route::get('/', [userController::class, 'index']);
+Route::get('/home', [userController::class, 'home']);
+
 
 
 
@@ -36,6 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+    Route::get('/about', [userController::class, 'about']);
+    Route::get('/product', [userController::class, 'product']);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
 <div class="container">
@@ -30,6 +31,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url("product")}}">Product</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url("dashboard")}}">Dashboard</a>
+              </li>
+                 
               <li>
             <form action="POST" action="{{route("logout")}}">
                 @csrf
@@ -45,10 +50,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url("register")}}">Registration</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{url("dashboard")}}">Dashboard</a>
-              </li>
-                 
+              
              @endguest
               
               

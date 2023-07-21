@@ -5,6 +5,16 @@
         @extends('layouts.test')
 
         @section('content')
+
+
+      <h1>  All  Category
+      </h1>
+      <ul class="list-inline">
+        @foreach ($cats as $cat)
+            <li class="list-inline-item">{{$cats->name}} </li>
+        @endforeach
+      </ul>
+
         <div class="card" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">

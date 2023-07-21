@@ -41,6 +41,10 @@ Route::get('/product',[userController::class,'product']);
 
     git link: git clone  https://github.com/asamamun/r53_laravel_class.git
 
+
+https://chocolatey.org/
+https://nodejs.org/en/download/current
+
 composer create-project laravel/laravel r53bookcode
 
 cd r53bookcode
@@ -59,6 +63,9 @@ php artisan breeze:install blade
 php artisan migrate
 npm install
 npm run build
+
+
+composer install 
 
 to create controller:
 php artisan make:controller TestController
