@@ -36,6 +36,7 @@
           @endforeach
   
         </table>
+        {{$cats->links()}}
 
 
 
@@ -85,8 +86,8 @@
         </script>
             
         @endsection
-
-
+          
+       
 
     </div>
 </div>

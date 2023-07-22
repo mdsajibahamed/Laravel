@@ -35,22 +35,37 @@
                 <a class="nav-link" href="{{url("dashboard")}}">Dashboard</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{url("catagory")}}">Category</a>
+                <a class="nav-link" href="{{url("category")}}">Category</a>
+              </li>
+
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{Auth::user()->name}} 
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="{{route("profile.edit")}}">Profile</a></li>
+                  <li><form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="nav-link" href="#" onclick="event.preventDefault();
+                this.closest('form').submit();">Logout</a>
+                  </form>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="nav-link"  href="https://laravel.com/" target="_blank">Something Wrong</a></li>
+                </ul>
+
               </li>
                  
-              <li>
+              {{-- <li>
                 <form method="POST" action="{{ route('logout') }}">
                   @csrf
                   <a class="nav-link" href="#" onclick="event.preventDefault();
                   this.closest('form').submit();">Logout</a>
-              </form>  
-              
-
-              <form action="{{route('logout')}}" method="POST">
-              @csrf 
-              <a href="#" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
-              </form>
+              </form> 
               </li>
+               --}}
              @endauth
              @guest
              <li class="nav-item">
@@ -76,6 +91,12 @@
       {{-- row  --}}
       <div class="row">
         <div class="col-9">
+          {{-- successfullay message  --}}
+
+          {{-- @include('partials.flash') --}}
+
+          {{-- successfullay message end --}}
+
             @yield('content')
 
 

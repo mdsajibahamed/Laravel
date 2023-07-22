@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CatagoryController;
+use App\Http\Controllers\categoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::get('/', [userController::class, 'index']);
 Route::get('/home', [userController::class, 'index']);  //home dile ki hoy 
-Route::resource('catagory', CatagoryController ::class);
+
 
 
 
@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/about', [userController::class, 'about']);
     Route::get('/product', [userController::class, 'product']);
+    Route::resource('category', categoryController ::class);
 });
 
 require __DIR__ . '/auth.php';

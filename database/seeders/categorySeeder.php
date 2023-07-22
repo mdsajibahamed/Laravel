@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\catagory;
+use App\Models\category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class catagorySeeder extends Seeder
+class categorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class catagorySeeder extends Seeder
     public function run(): void
     {
         for ($i=1; $i <=20; $i++) { 
-           catagory::create([
+           category::create([
             'name'=>fake()->name(),
             'description'=>fake()->text(),
            ]);
