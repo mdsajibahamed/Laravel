@@ -5,6 +5,7 @@
     <div class="d-flex justify-content-between">
         <h1>All category</h1>
         <a style="font-size:3em" href="{{url('category/create')}}"><i class="bi bi-file-plus-fill"></i></a>
+        <input type="search" value="" class="btn btn-light">
     
     </div>
  
@@ -37,20 +38,22 @@
                         <a href="{{route("category.edit",$cat->id)}}"><i class="bi bi-pencil-square"></i></a>
 
                         {{-- <a href="{{route("category.edit",$cat->id)}}"><i class="bi bi-pencil-square"></i></a> --}}
+
+
+{{--                         
                      <form action="{{route("category.destroy",$cat->id)}}" method="post" class="d-inline"> 
                        @csrf
                        @method("delete")
                        <a href="#" onclick="del(even,this)"><i class="bi bi-trash3-fill"></i></a>
-                    </form>
+                    </form> --}}
 
-                    {{-- sir 
                     <form action="{{route("category.destroy",$cat->id)}}" method="post" class="d-inline">
                         @csrf
                         @method("delete")
                        
                         <a href="#" onclick="del(event, this)"><i class="bi bi-trash3-fill"></i></a>
                         </form> 
-                         --}}
+                        
 
                          {{-- <button type="submit"><i class="bi bi-trash3-fill"></i></button> --}}
                     </td>

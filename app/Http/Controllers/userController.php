@@ -14,9 +14,10 @@ class userController extends Controller
         $cats = category::paginate(config("idb.perpage"));
         return view("home")->with("cats",$cats)->with("users",$users);
     }
-    public funcw("home");
-    }tion home(){
-        return vie
+    public function home(){
+        return view("home");
+    }
+       
     public function about(){
         return view("about");
     }
