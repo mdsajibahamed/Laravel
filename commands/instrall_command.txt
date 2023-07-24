@@ -259,3 +259,9 @@ public/build/assets/app-4a08c204.js   70.82 kB │ gzip: 26.36 kB
 
 
 F:\xxammp\htdocs\Laravel\error>
+
+php artisan make:model Subcategory -crms 
+php artisan  
+
+
+php artisan make:model Comment -m 
