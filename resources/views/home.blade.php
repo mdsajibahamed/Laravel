@@ -39,7 +39,6 @@
         {{$cats->links()}}
 
 
-
       </ul>
 
         <div class="card" style="width: 18rem;">
@@ -85,9 +84,6 @@
             })
         </script>
             
-        @endsection
-          
-       
-
+        @endsection               
     </div>
 </div>

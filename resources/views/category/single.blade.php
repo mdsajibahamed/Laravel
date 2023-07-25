@@ -11,5 +11,6 @@ Description
 <h1>{{($cat->description)}} </h1>
 <label for="">Create Time</label>
 <strong>{{$cat->created_at}}</strong> <br>
-    
+ 
+
 @endsection

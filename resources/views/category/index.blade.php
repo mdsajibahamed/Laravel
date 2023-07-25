@@ -10,15 +10,14 @@
     </div>
  
 
+
     <table class="table table-striped  table-primary">
         <colgroup>
         <col>
         <col>
         <col>
         <col style="width: 20%">
-        
         </colgroup>
-
 
         <tr>
             <th>Id </th>
