@@ -265,3 +265,5 @@ php artisan
 
 
 php artisan make:model Comment -m 
+
+cp .env.example .env 
