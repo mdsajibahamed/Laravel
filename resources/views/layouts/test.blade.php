@@ -109,12 +109,8 @@
       </div>
 
       <div class="row">
-        <div class="col-6">
+        <div class="col-9">
           @yield('down')
-        </div>
-
-        <div class="col-6">
-          @yield('up')
         </div>
       </div>
 
