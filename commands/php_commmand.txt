@@ -1,0 +1,22 @@
+data create sedder file  ....
+php artisan db:seed or php artisan db:seed categorySeeder
+
+delete category table ...
+php artisan migrate:rollback 
+
+create category table migration  ...
+php artisan migrate 
+
+model create singular name........
+php arrisan make:model category -mcrs
+php artisan make:model Subcategory -mcr
+php artisan make:model Product -mcrsR
+php artisan make:model Image -mcrs
+php artisan make:model Comment -m
+
+change model name ..mcrs ......
+delete migaration table 
+delete model 
+delete controller with resource
+then  php artisan make:model Subcategory 
+
