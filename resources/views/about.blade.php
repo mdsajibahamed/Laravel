@@ -13,7 +13,7 @@
 @endsection
 @section('sidebar')
 <ul>
-  
+
   <li>India</li>
   <li>Jarman</li>
   <li>Japan</li>
