@@ -108,6 +108,16 @@
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-6">
+          @yield('down')
+        </div>
+
+        <div class="col-6">
+          @yield('up')
+        </div>
+      </div>
+
       <div class="container">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
