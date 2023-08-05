@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/about', [userController::class, 'about']);
-    Route::get('/product', [userController::class, 'product']);
+    Route::resource('product', ProductController::class);
     Route::resource('category', categoryController ::class);
 });
 

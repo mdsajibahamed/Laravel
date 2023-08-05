@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateCategoryRequest;
 use App\Models\category;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class CategoryController extends Controller
     public function index()
     {
         
-        $cats =category::paginate(config("idb.perpage"));
+        $cats =category::with('subcategories')->paginate(config("idb.perpage"));
+        // dd($cats);
         return view("category.index")->with('cats', $cats);
         
     }
@@ -33,6 +35,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        // $this->validate($request,[
+        //  'name'=>"required|string|min:5|max:10|unique:categories,name",
+        //  'description'=>"required|string|min:10|max:255"
+        // ]);
         category::create($request->all());
         return redirect("category")->with("success", "Successfully created");
     }

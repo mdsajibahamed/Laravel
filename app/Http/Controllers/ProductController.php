@@ -13,7 +13,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+    //  dd(Product::paginate(config("idb.perpage")));
+        $products = Product::all();
+     return view('product.index', compact('products'));
     }
 
     /**

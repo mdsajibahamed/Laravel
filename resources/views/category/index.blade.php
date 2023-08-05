@@ -23,6 +23,7 @@
             <th>Id </th>
             <th>Name</th>
             <th>Description</th>
+            <th>SubCategories</th>
             <th>Action</th>
         </tr>
 
@@ -31,6 +32,13 @@
                     <td>{{$cat->id}}</td>
                     <td>{{$cat->name}}</td>
                     <td>{{$cat->description}}</td>
+                    <td>
+                        <ul>
+                            @foreach ($cat->subcategories as $sc)
+                                <li>{{$sc->name}}</li>
+                            @endforeach
+                        </ul>
+                    </td>
                     <td style="text-align:center">
                         <a href="{{url("category/".$cat->id)}}"><i class="bi bi-eye-fill"></i></i></a>
 
