@@ -3,7 +3,9 @@
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\userController;
+use App\Models\Subcategory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/about', [userController::class, 'about']);
     Route::resource('product', ProductController::class);
     Route::resource('category', categoryController ::class);
+    Route::resource('subcategory',SubcategoryController::class);
 });
 
 require __DIR__ . '/auth.php';

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\category;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class SubcategoryController extends Controller
      */
     public function index()
     {
-        //
+        $sc =Subcategory::with('category')->paginate(config('idb.perpage'));
+     return view('subcategory.index')->with("subcategories",$sc);
     }
 
     /**
@@ -20,7 +22,8 @@ class SubcategoryController extends Controller
      */
     public function create()
     {
-        //
+        $c = category::pluck("name","id");
+        return view("subcategory/create")->with('categories',$c);
     }
 
     /**

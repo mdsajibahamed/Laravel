@@ -1,6 +1,9 @@
 @extends('layouts.test')
 @section('content')
-    <table>
+<div class="table-responsive">
+
+
+    <table class="table table-striped">
         <tr>
             <th>ID</th>
             <th>Cat/SubCat</th>
@@ -18,10 +21,14 @@
         @forelse ($products as $product)
         <tr>
             <td>{{$product->id}}</td>
-            <td>{{$product->category->name}}/{{$product->subcategory->name}}</td>
+            <td>
+                {{-- {{ $product->category->name }}/
+                {{ $product->subcategory->name }} --}}
+                {{$product->category->name}}/{{$product->subcategory->name}}
+            </td>
             <td>{{$product->name}}</td>
             <td>{{$product->sku}}</td>
-            <td>{{$product->details}}</td>
+            {{-- <td>{{$product->details}}</td> --}}
             <td>{{$product->price}}</td>
             <td>{{$product->quantity}}</td>
             <td>{{$product->status}}</td>
@@ -39,4 +46,7 @@
             
         @endforelse
     </table>
+</div>
+<hr>
+{{-- {{$products->link()}} --}}
 @endsection

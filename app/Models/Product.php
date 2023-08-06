@@ -41,7 +41,7 @@ class Product extends Model
       /**
      * Get the post that owns the comment.
      */
-    public function subcategories(): BelongsTo
+    public function subcategory(): BelongsTo
     {
         return $this->belongsTo(Subcategory::class);
     }
