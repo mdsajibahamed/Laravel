@@ -23,7 +23,7 @@ class SubcategoryController extends Controller
     public function create()
     {
         $c = category::pluck("name","id");
-        return view("subcategory/create")->with('categories',$c);
+        return view("subcategory.create")->with('categories',$c);
     }
 
     /**
@@ -31,7 +31,15 @@ class SubcategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    //    $this->validate($request,[
+    //      'category_id'=>"required",
+    //     'name'=>"required|min:2|max:255"
+    //    ]);
+    //   if(Subcategory::create($request->all())){
+    //     return redirect("subcategory")->with("info","Subcategory Created");
+    //    };
+    Subcategory::create($request->all());
+    return redirect("subcategory")->with("success","successfully create");
     }
 
     /**
@@ -47,7 +55,8 @@ class SubcategoryController extends Controller
      */
     public function edit(Subcategory $subcategory)
     {
-        //
+       $c = category::pluck("name","id");
+       return view('subcategory.edit')->with("categories",$c)->with("subcategory",$subcategory);
     }
 
     /**
@@ -55,7 +64,9 @@ class SubcategoryController extends Controller
      */
     public function update(Request $request, Subcategory $subcategory)
     {
-        //
+        if($subcategory->update($request->all())){
+            return redirect("subcategory")->with("info","updated successfully");
+        }
     }
 
     /**

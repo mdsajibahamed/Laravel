@@ -23,7 +23,7 @@
                 <td>{{$loop->iteration}}</td>
                 <td>{{$sc->category->name}}</td>
                 <td>{{$sc->name}}</td>
-                <td>Edit|Delete</td>
+                <td><a href="{{route('subcategory.edit',$sc->id)}}">Edit</a></td>
             </tr>
         @empty
             

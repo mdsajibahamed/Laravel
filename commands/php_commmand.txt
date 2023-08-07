@@ -20,3 +20,6 @@ delete model
 delete controller with resource
 then  php artisan make:model Subcategory 
 
+
+package html.......
+composer require spatie/laravel-html
