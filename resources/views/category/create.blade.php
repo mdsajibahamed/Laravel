@@ -1,7 +1,7 @@
 @extends('layouts.test')
 
 @section('content')
-    <h1> Create category</h1>
+    <h1> Create category Subject </h1>
     <form action="{{route('category.store')}}" method="POST">
         
     @csrf
