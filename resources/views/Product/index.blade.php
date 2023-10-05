@@ -1,5 +1,6 @@
 @extends('layouts.test')
 @section('content')
+<h1>Product</h1>
 <div class="table-responsive">
 
 
